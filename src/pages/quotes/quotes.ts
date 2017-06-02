@@ -24,5 +24,8 @@ export class QuotesPage implements OnInit {
     this.quoteGroup = this.navParams.data;
   }
 
+  onAddToFavorites() {
+    
+  }
 
 }
