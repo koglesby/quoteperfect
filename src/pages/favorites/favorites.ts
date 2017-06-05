@@ -12,7 +12,8 @@ import { QuotePage } from '../quote/quote';
 export class FavoritesPage {
   quotes: Quote[];
   
-  constructor(private quotesService: QuotesService, private modalCtrl: ModalController) {
+  constructor(private quotesService: QuotesService,
+              private modalCtrl: ModalController) {
     
   }
   
@@ -38,4 +39,8 @@ export class FavoritesPage {
     });
     this.quotes.splice(position, 1);
   }
+
+  // onOpenMenu() {
+  //   this.menuCtrl.open();
+  // }
 }
