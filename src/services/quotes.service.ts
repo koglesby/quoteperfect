@@ -1,4 +1,3 @@
-
 import { Quote } from '../data/quote.interface';
 
 export class QuotesService {

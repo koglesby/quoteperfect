@@ -3,6 +3,7 @@ import { IonicPage, ModalController } from 'ionic-angular';
 import { Quote } from '../../data/quote.interface';
 import { QuotesService } from '../../services/quotes.service';
 import { QuotePage } from '../quote/quote';
+import { SettingsService } from '../../services/settings.service';
 
 @IonicPage()
 @Component({
@@ -13,7 +14,8 @@ export class FavoritesPage {
   quotes: Quote[];
   
   constructor(private quotesService: QuotesService,
-              private modalCtrl: ModalController) {
+              private modalCtrl: ModalController,
+              private settingsService: SettingsService) {
     
   }
   
@@ -39,8 +41,18 @@ export class FavoritesPage {
     });
     this.quotes.splice(position, 1);
   }
+  
+  // getBgColor() {
+  //   return (this.settingsService.isAltBg()) ? 'light' : 'quoteBackground';
+  // }
+
+  isAltBg() {
+    return this.settingsService.isAltBg();
+  }
 
   // onOpenMenu() {
   //   this.menuCtrl.open();
   // }
+  
+  
 }
